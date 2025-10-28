@@ -7,15 +7,12 @@ const rootdir=require("../utils/pathUTIL")
 
 
  hostRouter.get("/host/add-home",(req,res,next)=>{
-  res.render('add-home')
+  res.sendFile(path.join(rootdir,"views","add-home.html"))
    
  })
- const registerhomes=[]
   hostRouter.post("/host/add-home",(req,res,next)=>{
-     console.log('home Registration successful for',req.body)
-     registerhomes.push({houseDetail:req.body})
-  res.render('home-added')
+    console.log(req.body)
+  res.sendFile(path.join(rootdir,"views","home-added.html"))
  })
 
- exports.hostRouter=hostRouter;
- exports.registerhomes=registerhomes;
+ module.exports=hostRouter;
