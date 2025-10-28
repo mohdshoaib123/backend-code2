@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Your Home</title>
+  <!-- ✅ Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <header class="bg-white shadow-md p-6">
+    <h1 class="text-3xl font-bold text-center text-rose-600">Register Your Home</h1>
+  </header>
+
+  <main class="flex-grow flex items-center justify-center">
+    <form 
+      action="/host/add-home" 
+      method="POST"
+      class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
+    >
+      <label for="houseName" class="block text-lg font-semibold mb-2 text-gray-700">
+        House Name
+      </label>
+      <input 
+        type="text" 
+        id="houseName" 
+        name="houseName" 
+        placeholder="Enter the name of your house"
+        class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-rose-500"
+        required
+      />
+        <input 
+        type="text" 
+        
+        name="price" 
+        placeholder="Enter price per night"
+        class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-rose-500"
+        required
+      />
+        <input 
+        type="text" 
+        
+        name="location" 
+        placeholder="location"
+        class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-rose-500"
+        required
+      />
+        <input 
+        type="text" 
+        
+        name="rating" 
+        placeholder="Rating"
+        class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-rose-500"
+        required
+      />
+        <input 
+        type="text" 
+        
+        name="photo" 
+        placeholder="photo"
+        class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-rose-500"
+        required
+      />
+
+      <input 
+        type="submit" 
+        value="Add Home"
+        class="w-full bg-rose-500 text-white font-semibold py-2 rounded-md hover:bg-rose-600 transition"
+      />
+    </form>
+  </main>
+
+</body>
+</html>
